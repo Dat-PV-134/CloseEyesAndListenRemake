@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/custom_button_style1"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_foreground" />
+
+        <RelativeLayout
+            android:id="@+id/vButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgProfile"
+            android:layout_marginTop="20dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnSignIn"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/custom_button_style1"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="Đăng nhập"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btnSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@id/btnSignIn"
+                android:background="@drawable/custom_button_style2"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="Đăng ký"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tvHelloUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:textColor="@color/main_green"
+                android:textSize="20sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvChangeInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/vButton"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:drawableStart="@drawable/icon_me_onclick"
+            android:drawableEnd="@drawable/arrow_right"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:text="Chỉnh sửa thông tin"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvChangePass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvChangeInfo"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:drawableStart="@drawable/ic_baseline_lock_24"
+            android:drawableEnd="@drawable/arrow_right"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:text="Đổi mật khẩu"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvTitlePlaylist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvChangePass"
+            android:layout_marginStart="30sp"
+            android:layout_marginTop="30dp"
+            android:text="Playlist của tôi"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:visibility="visible" />
+
+        <com.airbnb.epoxy.EpoxyRecyclerView
+            android:id="@+id/rvPlayList"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTitlePlaylist" />
+
+        <RelativeLayout
+            android:id="@+id/vAddNewPlayList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rvPlayList"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="30dp">
+
+            <ImageView
+                android:id="@+id/imgAddNewPlaylist"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/custom_button_style1"
+                android:padding="13dp"
+                android:src="@drawable/icon_add" />
+
+            <RelativeLayout
+                android:id="@+id/vTextAddNewPlaylist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/imgAddNewPlaylist">
+
+                <TextView
+                    android:id="@+id/tvAddNewPlaylist1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Thêm Playlist"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvAddNewPlaylist2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvAddNewPlaylist1"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Tạo Playlist các bài hát bạn thích"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnSignOut"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@id/vAddNewPlayList"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/custom_button_style1"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="Đăng xuất"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/spaceView"
+            android:layout_below="@id/btnSignOut"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"/>
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

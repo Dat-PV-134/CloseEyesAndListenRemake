@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Splash Screen Color   -->
+    <color name="spl_background">#000000</color>
+
+    <!-- Home color   -->
+    <color name="main_bg">#000000</color>
+    <color name="main_green">#03AE9D</color>
+    <color name="search_bar_background">#676767</color>
+    <color name="gray">#A9A9A9</color>
+    <color name="gray_button">#898989</color>
+    <color name="gray_2">#BEBEBE</color>
+    <color name="teal_200">#FF03DAC5</color>
+</resources>

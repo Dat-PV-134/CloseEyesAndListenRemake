@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Close Eyes And Listen</string>
+    <string name="can_t_play_this_song">Can\'t play this song</string>
+    <string name="history">History</string>
+</resources>

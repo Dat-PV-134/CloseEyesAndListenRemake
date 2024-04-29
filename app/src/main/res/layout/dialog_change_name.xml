@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/bg_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/_20sdp"
+    android:paddingBottom="@dimen/_26sdp"
+    android:layout_marginHorizontal="@dimen/_20sdp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/tv_title_change_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        android:text="Đổi tên"/>
+
+    <EditText
+        android:id="@+id/etReNewName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title_change_name"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/custom_button_style1"
+        android:drawableStart="@drawable/icon_me_onclick"
+        android:drawablePadding="10dp"
+        android:hint="Nhập tên mới"
+        android:padding="13dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btnChangeName"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@id/etReNewName"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/custom_button_style2"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="Lưu"
+        android:textColor="@color/black" />
+</RelativeLayout>
